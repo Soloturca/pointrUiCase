@@ -1,0 +1,31 @@
+{
+  "pages": [
+    {
+      "pageInfo": {
+        "pageName": "imdbMainPage",
+        "parent": "",
+        "waitelement": ""
+      },
+      "elements": [
+        {
+          "MenuButton": "//*[@id=\"iconContext-menu\"]"
+        },
+        {
+          "Awards&EventsButton": "//*[@id=\"imdbHeader\"]/div[2]/aside/div/div[2]/div/div[3]/span/label/span[2]"
+        },
+        {
+          "OscarsButton": "//*[@id=\"imdbHeader\"]/div[2]/aside/div/div[2]/div/div[3]/span/div/div/ul/a[1]/span"
+        },
+        {
+          "SearchbarTextArea": "//*[@id=\"suggestion-search\"]"
+        },
+        {
+          "TheCircusSearchbarButton": "//*[contains(text(), 'The Circus')]"
+        },
+        {
+          "TheJazzSingerSearchbarButton": "//*[contains(text(), 'The Jazz Singer')]"
+        }
+      ]
+    }
+  ]
+}

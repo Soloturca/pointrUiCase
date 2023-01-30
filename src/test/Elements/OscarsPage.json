@@ -1,0 +1,19 @@
+{
+  "pages": [
+    {
+      "pageInfo": {
+        "pageName": "OscarsPage",
+        "parent": "",
+        "waitelement": ""
+      },
+      "elements": [
+        {
+          "EventHistoryText": "//*[@id=\"right-5-react\"]/div/div[1]/h3"
+        },
+        {
+          "1929Button": "//a[contains(text(), '1929')]"
+        }
+      ]
+    }
+  ]
+}
