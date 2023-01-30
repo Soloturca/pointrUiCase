@@ -3,5 +3,5 @@
 *Fotoğrafların linkini kontrol etmek için "See All Photos" butonunu kullanmak yerine fotoğrafların bulunduğu linkleri açarak ilerlettim adımları. Bunun sebebi ilgili sayfada "See All Photos" isimli bir buton olmamasıdır.
 
 *Sorunuz olursa benimle aşağıdaki iletişim bilgilerinden birini kullanarak iletişime geçebilirsiniz:
-E-Mail Adresi: 0507 376 98 87
+E-Mail Adresi: akif.mau@gmail.com
 LinkedIn: https://www.linkedin.com/in/mehmet-akif-uluca/
