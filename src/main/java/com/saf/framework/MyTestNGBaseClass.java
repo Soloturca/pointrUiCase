@@ -1,8 +1,6 @@
 package com.saf.framework;
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
+
 import io.appium.java_client.screenrecording.CanRecordScreen;
 import io.qameta.allure.Allure;
 import io.qameta.allure.model.Status;
@@ -22,9 +20,9 @@ import java.util.HashMap;
 
 public class MyTestNGBaseClass {
 
+
     public static WebDriver oDriver;
-    public static ExtentReports oExtentReport;
-    public static ExtentTest oExtentTest;
+
     public static int ssNumber;
     public static String reportPath;
     public static boolean dbFlag;
@@ -50,8 +48,7 @@ public class MyTestNGBaseClass {
             e.printStackTrace();
         }
 
-        oExtentReport = new ExtentReports("Reports/" + reportPath + "/TestSuiteReport.html", true);
-        oExtentReport.loadConfig(new File("config.xml"));
+
         ssNumber = 0;
 
         if (browserName.equalsIgnoreCase("ie")) {
@@ -177,8 +174,7 @@ public class MyTestNGBaseClass {
     @AfterSuite
 
     public void afterSuite() throws Throwable {
-        oExtentReport.endTest(oExtentTest);
-        oExtentReport.flush();
+
 
 
         oDriver.quit();
@@ -202,28 +198,7 @@ public class MyTestNGBaseClass {
             }
 
 
-            if (status.equalsIgnoreCase("PASS")) {
-                if (ssFlag) {
-                    oExtentTest.log(LogStatus.PASS, message + "\n" + oExtentTest.addScreenCapture(dest));
-                } else {
-                    oExtentTest.log(LogStatus.PASS, message);
-                }
-                //DBReporting.insertExecutionDetailsIntoDB(testCaseId, "PASS", message, className, System.getProperty("user.name"));
-            } else if (status.equalsIgnoreCase("FAIL")) {
-                if (ssFlag) {
-                    oExtentTest.log(LogStatus.FAIL, message + "\n" + oExtentTest.addScreenCapture(dest));
-                } else {
-                    oExtentTest.log(LogStatus.FAIL, message);
-                }
-                //DBReporting.insertExecutionDetailsIntoDB(testCaseId, "FAIL", message, className, System.getProperty("user.name"));
-            } else {
-                if (ssFlag) {
-                    oExtentTest.log(LogStatus.INFO, message + "\n" + oExtentTest.addScreenCapture(dest));
-                } else {
-                    oExtentTest.log(LogStatus.INFO, message);
-                }
-                //DBReporting.insertExecutionDetailsIntoDB(testCaseId, "INFO", message, className, System.getProperty("user.name"));
-            }
+
             //oExtentTest.log(LogStatus.INFO, oExtentTest.addScreenCapture(dest));
         } catch (Exception e) {
             e.printStackTrace();
@@ -237,7 +212,7 @@ public class MyTestNGBaseClass {
 
         //String completeClassName = new Exception().getStackTrace()[1].getClassName();
         //className = completeClassName.split("\\.")[completeClassName.split("\\.").length - 1];
-        oExtentTest = oExtentReport.startTest(scenarioName);
+
         //MyTestNGBaseClass.
         //Create entry in the Test Execution table for the test started
         //testCaseId = DBReporting.insertExecutionRecord(className);

@@ -13,16 +13,15 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
-
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import java.time.Duration;
 
 import java.io.ByteArrayInputStream;
-import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.Random;
@@ -39,7 +38,7 @@ public class CommonLib extends MyTestNGBaseClass {
     int timeout = 30;
     Parser parser = new Parser();
     Actions actions = new Actions(oDriver);
-    WebDriverWait wait = new WebDriverWait(oDriver, 30);
+    WebDriverWait wait = new WebDriverWait(oDriver, Duration.ofSeconds(10));
 
 
     public String getTheElementInformation(String elem, int index) {
@@ -300,7 +299,7 @@ public class CommonLib extends MyTestNGBaseClass {
     //-----------------------------------------------
     public static DesiredCapabilities getCapability() throws Exception {
         DesiredCapabilities oCapability = new DesiredCapabilities();
-        oCapability.setJavascriptEnabled(true);
+
         //oCapability.setCapability("proxy", getProxy());
 
         return oCapability;
@@ -375,7 +374,7 @@ public class CommonLib extends MyTestNGBaseClass {
                 break;
 
             case 3:
-                //System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + AutomationConstants.sChromeDriverPath);
+                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + AutomationConstants.sChromeDriverPath);
                 WebDriverManager.chromedriver().setup();
                 oDriver = new ChromeDriver(getChromeOptions());
                 break;
@@ -492,7 +491,7 @@ public class CommonLib extends MyTestNGBaseClass {
 
     public static boolean waitElementVisible(WebDriver oDriver, WebElement element) {
         boolean flag = false;
-        WebDriverWait wait = new WebDriverWait(oDriver, 60);
+        WebDriverWait wait = new WebDriverWait(oDriver, Duration.ofSeconds(60));
         try {
             wait.until(ExpectedConditions.visibilityOf(element));
             flag = true;
@@ -514,7 +513,7 @@ public class CommonLib extends MyTestNGBaseClass {
 
     public static boolean waitElementClickable(WebDriver oDriver, WebElement element) {
         boolean flag = false;
-        WebDriverWait wait = new WebDriverWait(oDriver, 60);
+        WebDriverWait wait = new WebDriverWait(oDriver, Duration.ofSeconds(60));
         try {
             wait.until(ExpectedConditions.elementToBeClickable(element));
             flag = true;

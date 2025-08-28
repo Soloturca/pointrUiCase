@@ -29,7 +29,7 @@ import java.io.IOException;
 
 
 @CucumberOptions(
-        features = "src/test/features/IMDB_Test_Case.feature",
+        features = "src/test/features/pointrUiCase.feature",
 //        tags = "",
         plugin = {"pretty", "io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm"},
         glue = {"com.project.stepdefs"})
