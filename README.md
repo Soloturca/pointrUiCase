@@ -1,29 +1,64 @@
-This is a Selenium based UI automation project for Pointr that works with Chrome and Cirefox browsers.
+# Pointr UI Automation Project
 
-Prerequisites to run the project:
--Java 11 or higher
--Maven 3.9.11 or higher
--Chrome and firefox browsers
+This is a **Selenium-based UI automation project** for Pointr that works with **Chrome** and **Firefox** browsers.
 
-How to run the project:
+---
 
-First method:
--Within cmd change the directory to project folder (Example: cd C:\Users\user1\Desktop\pointrCase\pointrUiCase)
--Then use the command: mvn clean test -DsuiteXmlFile=testng.xml
+## Prerequisites
 
-Second method:
--In an IDE (Eclipse, IntelliJ etc.) run the testng.xml file in the project folder.
+To run the project, make sure you have the following installed:
 
-Browser support:
-This project supports both Chrome and Firefox browsers. To change the browser that project uses change line 4 in testng.xml file:
+- Java 11 or higher  
+- Maven 3.9.11 or higher  
+- Chrome and Firefox browsers  
 
-For Chrome: (<parameter name="browserName" value="chrome"/>)
-For Firefox: (<parameter name="browserName" value="firefox"/>)
+---
 
-CI/CD:
-File named "Jenkinsfile" is responsible for CI/CD design. In this design:
-1- Git repo checkout done by github link.
-2- Triggering the test with tihs command in the file: (mvn test -DsuiteXmlFile=TestNG/CIBuild.xml -Dtest=pointr)
-3- Generating allure reports for the test results/logs.
+## How to Run the Project
 
+### First Method: Using Command Prompt
+
+1. Change the directory to the project folder:  
+   ```bash
+   cd C:\Users\user1\Desktop\pointrCase\pointrUiCase
+   ```
+2. Run the Maven command:  
+   ```bash
+   mvn clean test -DsuiteXmlFile=testng.xml
+   ```
+
+### Second Method: Using an IDE
+
+- Open the project in **Eclipse**, **IntelliJ**, or other IDE.  
+- Run the **testng.xml** file located in the project folder.
+
+---
+
+## Browser Support
+
+This project supports both **Chrome** and **Firefox** browsers.  
+
+To change the browser, edit **line 4** in the `testng.xml` file:
+
+- **For Chrome:**  
+  ```xml
+  <parameter name="browserName" value="chrome"/>
+  ```
+- **For Firefox:**  
+  ```xml
+  <parameter name="browserName" value="firefox"/>
+  ```
+
+---
+
+## CI/CD
+
+The file named **`Jenkinsfile`** is responsible for the CI/CD design. In this setup:
+
+1. Git repository checkout is done using the GitHub link.  
+2. Tests are triggered using the command specified in the Jenkinsfile:  
+   ```bash
+   mvn test -DsuiteXmlFile=TestNG/CIBuild.xml -Dtest=pointr
+   ```
+3. **Allure reports** are generated for the test results and logs.
 
