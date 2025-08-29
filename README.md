@@ -17,5 +17,13 @@ Second method:
 Browser support:
 This project supports both Chrome and Firefox browsers. To change the browser that project uses change line 4 in testng.xml file:
 
-For Chrome: <parameter name="browserName" value="chrome"/>
-For Firefox: <parameter name="browserName" value="firefox"/>
+For Chrome: (<parameter name="browserName" value="chrome"/>)
+For Firefox: (<parameter name="browserName" value="firefox"/>)
+
+CI/CD:
+File named "Jenkinsfile" is responsible for CI/CD design. In this design:
+1- Git repo checkout done by github link.
+2- Triggering the test with tihs command in the file: (mvn test -DsuiteXmlFile=TestNG/CIBuild.xml -Dtest=pointr)
+3- Generating allure reports for the test results/logs.
+
+
