@@ -7,7 +7,7 @@
 	<parameter name="browserName" value="chrome"/>
 
 	<!-- Cucumber Test -->
-	<test name="Test" enabled="true">
+	<test name="pointr" enabled="true">
 		<classes>
 			<class name="com.project.tests.TestRunner"/>
 		</classes>

@@ -3,7 +3,6 @@
     {
       "pageInfo": {
         "pageName": "blogPage",
-        "parent": "",
         "waitelement": "blogHeader"
       },
       "elements": [
@@ -12,8 +11,25 @@
 
         },
         {
-          "readMore1": "//*[@id=\"hs_cos_wrapper_dnd_area-module-4\"]/section/div/div/div[2]/div[1]/div/div[1]/div[2]/span/a"
+          "readMore1": "//*[@id=\"hs_cos_wrapper_dnd_area-module-4\"]/section/div/div/div[2]/div[1]/div/div[2]/a"
+        },
+
+        {
+          "readMore2": "//*[@id=\"hs_cos_wrapper_dnd_area-module-4\"]/section/div/div/div[2]/div[2]/div/div[2]/a"
+        },
+        {
+          "readMore3": "//*[@id=\"hs_cos_wrapper_dnd_area-module-4\"]/section/div/div/div[2]/div[3]/div/div[2]/a"
+        },
+        {
+          "article1": "//*[@id=\"hs_cos_wrapper_post_body\"]"
+        },
+        {
+          "article2": "//*[@id=\"hs_cos_wrapper_post_body\"]"
+        },
+        {
+          "article3": "//*[@id=\"hs_cos_wrapper_post_body\"]"
         }
+
       ]
     }
   ]
